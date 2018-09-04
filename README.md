@@ -1,1 +1,8 @@
-获得任意两数的最小公倍数。
+#include<stdio.h>
+
+int getCommenMultiple(int x, int y) {
+	if (x%y == 0)
+		return x;
+	else
+		return getCommenMultiple(y, x%y) / (x%y)*x;
+}
